@@ -3,7 +3,7 @@ package auth
 import (
 	"errors"
 	"strings"
-	"wa/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
 )
 
 // ----*Models of auth package (aliased to canonical database models)*----

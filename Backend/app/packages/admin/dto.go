@@ -2,7 +2,7 @@ package admin
 
 import (
 	"time"
-	"wa/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
 )
 
 type User = database.User

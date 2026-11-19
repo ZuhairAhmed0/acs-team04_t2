@@ -5,7 +5,7 @@ import (
 
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
-	"wa/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
 )
 
 // ErrIdempotencyConflict indicates an idempotency key was reused with different parameters.

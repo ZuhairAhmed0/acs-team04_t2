@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"wa/app/helpers"
-	"wa/app/security"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/helpers"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/security"
 )
 
 // HandleDashboard handles GET /api/v1/admin/dashboard.

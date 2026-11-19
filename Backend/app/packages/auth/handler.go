@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"wa/app/helpers"
-	"wa/app/security"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/helpers"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/security"
 )
 
 // HandleRegisterUser handles POST /api/v1/auth/register/user.

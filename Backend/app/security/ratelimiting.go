@@ -6,7 +6,7 @@ Change the reteliming strategy from in-memory to Leaky bocket strategy
 package security
 
 import (
-	"wa/app/helpers"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/helpers"
 	"net"
 	"net/http"
 	"sync"

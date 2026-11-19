@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"gorm.io/gorm"
-	"wa/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
 )
 
 // GetUserByID retrieves a user record by ID.

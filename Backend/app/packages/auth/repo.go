@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"gorm.io/gorm"
-	"wa/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
 )
 
 // EmailExists checks if the given email already exists in either users or stations.

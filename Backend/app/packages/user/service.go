@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"wa/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
 )
 
 func buildWalletData(userID uint64, wallet *Wallet) (WalletData, error) {

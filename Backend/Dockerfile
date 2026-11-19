@@ -9,7 +9,7 @@ RUN go mod download
 
 # Copy source code and build
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app/server main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app/server .
 
 # Final Stage
 FROM alpine:3.19

@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"wa/app/helpers"
-	"wa/app/security"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/helpers"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/security"
 )
 
 func decodeTransferRequest[T any](w http.ResponseWriter, r *http.Request) (uint64, T, string, bool) {

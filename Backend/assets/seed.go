@@ -8,9 +8,9 @@ import (
 
 	"gorm.io/gorm"
 
-	"wa/app/config"
-	"wa/app/database"
-	"wa/app/security"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/config"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/database"
+	"github.com/ZuhairAhmed0/acs-team04_t2/Backend/app/security"
 )
 
 const defaultTestPassword = "Password123!"
