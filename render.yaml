@@ -4,7 +4,7 @@ services:
     name: fuel-wallet-backend
     runtime: go
     rootDir: Backend
-    buildCommand: go mod tidy && go build -o server main.go
+    buildCommand: go mod tidy && go build -o server .
     startCommand: ./server
     envVars:
       - key: APP_ENV
