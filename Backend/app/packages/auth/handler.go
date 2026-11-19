@@ -91,8 +91,6 @@ func HandleLogin(w http.ResponseWriter, r *http.Request) {
 	}
 
 	security.SetAuthCookies(w, resp.AccessToken, resp.RefreshToken)
-	resp.AccessToken = ""
-	resp.RefreshToken = ""
 
 	_ = helpers.Encode(w, r, http.StatusOK, resp)
 }
@@ -155,7 +153,6 @@ func HandleRefresh(w http.ResponseWriter, r *http.Request) {
 	}
 
 	security.SetAccessTokenCookie(w, resp.AccessToken)
-	resp.AccessToken = ""
 
 	_ = helpers.Encode(w, r, http.StatusOK, resp)
 }

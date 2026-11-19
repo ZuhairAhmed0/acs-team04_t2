@@ -1,30 +1,41 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import * as authService from '../services/auth.service';
 import { SESSION_EXPIRED_EVENT } from '../services/http';
-import { clearLegacySession } from '../utils/session';
+import { clearStoredSession, getStoredSession, updateStoredUser } from '../utils/session';
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => getStoredSession()?.user ?? null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    clearLegacySession();
     let active = true;
+    const session = getStoredSession();
+
     authService
       .fetchCurrentAccount()
       .then((account) => {
-        if (active) setUser(account);
+        if (active) {
+          setUser(account);
+          updateStoredUser(account);
+        }
       })
       .catch(() => {
-        if (active) setUser(null);
+        if (active) {
+          if (!session?.accessToken) {
+            setUser(null);
+          }
+        }
       })
       .finally(() => {
         if (active) setLoading(false);
       });
 
-    const handleExpired = () => setUser(null);
+    const handleExpired = () => {
+      clearStoredSession();
+      setUser(null);
+    };
     window.addEventListener(SESSION_EXPIRED_EVENT, handleExpired);
     return () => {
       active = false;
@@ -42,7 +53,7 @@ export function AuthProvider({ children }) {
     try {
       await authService.logout();
     } finally {
-      clearLegacySession();
+      clearStoredSession();
       setUser(null);
     }
   }, []);

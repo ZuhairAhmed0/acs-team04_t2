@@ -88,7 +88,7 @@ func Run(
 	}
 
 	security.InitJWT(cfg.JWTSecretKey, cfg.JWTExpiration, cfg.RefreshTokenExpiration)
-	security.SetCookieSecure(strings.EqualFold(cfg.AppEnv, "production"))
+	security.SetCookieSecure(strings.EqualFold(strings.TrimSpace(cfg.AppEnv), "production") || os.Getenv("COOKIE_SECURE") == "true")
 
 	// Create server handler using strict configuration
 	srv := NewServer(ServerOptions{
