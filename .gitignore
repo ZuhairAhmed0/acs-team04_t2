@@ -17,12 +17,13 @@ Frontend/.env
 
 # Binaries and compiled files
 Backend/bin/
+/server
+Backend/server
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-server
 
 # Logs
 logs/
