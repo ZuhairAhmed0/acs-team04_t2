@@ -1,0 +1,12 @@
+FROM gcr.io/distroless/base-debian13:latest
+
+WORKDIR /app
+
+# Copy the server binary
+COPY bin/server /app/server
+
+# Expose application port
+EXPOSE 8080
+
+# Run server
+ENTRYPOINT ["/app/server"]

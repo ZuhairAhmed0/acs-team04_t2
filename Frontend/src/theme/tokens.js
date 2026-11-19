@@ -1,0 +1,15 @@
+export const tokens = {
+  red: '#C8102E',
+  redDark: '#8F0A21',
+  redDeep: '#4F0814',
+  redSoft: '#FCEBED',
+  ink: '#2B1417',
+  muted: '#7A6568',
+  line: '#F0E4E2',
+  canvas: '#FAF6F5',
+  surface: '#FFFFFF',
+  success: '#1E8E5A',
+  warning: '#C77A0C',
+  shadowSoft: '0 1px 2px rgba(79, 8, 20, 0.04), 0 10px 28px rgba(79, 8, 20, 0.06)',
+  gradientHero: 'linear-gradient(135deg, #A50D26 0%, #6E0A1A 55%, #4F0814 100%)',
+};
